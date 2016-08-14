@@ -1,7 +1,7 @@
 ---
 title: Dive
 level: 2
-author: Rhys Moyne
+author: Erik Kalstad og Geir Arne Hjelle
 ---
 
 # Introduction {.intro}

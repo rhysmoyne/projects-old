@@ -3,11 +3,11 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BUILDER="$DIR/codeclub_lesson_builder"
 # add reference to repo in commit message
 REPLACE="Merge pull request "
-REPLACE_WITH="kodeklubben/oppgaver"
+REPLACE_WITH="CreativeKids/projects"
 
-echo "cleaning dist"
+echo "cleaning creativekids.github.io"
 # Set CWD to the location of this file
-cd $DIR/dist && \
+cd $DIR/creativekids.github.io && \
 if [ -e README.md ]
 then
     find * ! -name README.md -delete
@@ -28,9 +28,12 @@ npm install
 
 echo "build and push"
 cd $DIR && \
+git clone git@github.com:CreativeKids/creativekids.github.io.git && \
 ./gulp dist && \
-cp -r build/* dist && \
-cd dist && \
+cp -r build/* creativekids.github.io && \
+cd creativekids.github.io && \
 git add --all . && \
 git commit -m "$COMMIT_MSG" && \
-git push
+git push && \
+cd .. && \
+rm -rf creativekids.github.io/
