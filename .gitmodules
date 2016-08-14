@@ -1,0 +1,3 @@
+[submodule "codeclub_lesson_builder"]
+	path = codeclub_lesson_builder
+	url = https://github.com/rhysmoyne/codeclub_lesson_builder.git
