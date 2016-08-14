@@ -5,26 +5,16 @@ BUILDER="$DIR/codeclub_lesson_builder"
 REPLACE="Merge pull request "
 REPLACE_WITH="CreativeKids/projects"
 
-echo "cleaning creativekids.github.io"
-# Set CWD to the location of this file
-cd $DIR/creativekids.github.io && \
-if [ -e README.md ]
-then
-    find * ! -name README.md -delete
-else
-    rm -r *
-fi
-
 echo "pulling changes"
 # do not pull changes while in dir
-cd $DIR/.. && \
-git -C $DIR pull && \
-git -C $BUILDER fetch origin master && \
-git -C $BUILDER merge --no-edit FETCH_HEAD && \
+#cd $DIR/.. && \
+#git -C $DIR pull && \
+#git -C $BUILDER fetch origin master && \
+#git -C $BUILDER merge --no-edit FETCH_HEAD && \
 MESSAGE="$(git -C $DIR log -1 --pretty=%B)" && \
 COMMIT_MSG="${MESSAGE/$REPLACE/$REPLACE_WITH}" && \
-cd $BUILDER && \
-npm install
+#cd $BUILDER && \
+#npm install
 
 echo "build and push"
 cd $DIR && \
