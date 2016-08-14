@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "stable"
+install: ./travis-install.sh
+script: ./gulp dist && ./gulp links
+notifications:
+  recipients:
+    - geirarne@gmail.com
+    - arve.seljebu@gmail.com
+cache:
+  directories:
+    - node_modules
