@@ -19,7 +19,7 @@ introduksjon til Scratch.
 
 Dersom dette prosjektet brukes som en introduksjon til Scratch
 anbefaler vi at du følger veiledningen
-[Kom i gang med Scratch](../veiledninger/kom_i_gang_med_scratch.html).
+Kom i gang med Scratch.
 
 Om elevene allerede er komfortable med Scratch kan du benytte
 anledningen til å snakke om
