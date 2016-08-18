@@ -18,12 +18,15 @@ COMMIT_MSG="${MESSAGE/$REPLACE/$REPLACE_WITH}" && \
 
 echo "build and push"
 cd $DIR && \
-git clone git@github.com:CreativeKids/creativekids.github.io.git && \
+git clone git@github.com:CreativeKids/creativekidssa.com.au.git && \
 ./gulp dist && \
-cp -r build/* creativekids.github.io && \
-cd creativekids.github.io && \
+cp -r build/* creativekidssa.com.au/projects && \
+cd creativekidssa.com.au && \
+echo "# Creative Kids Projects" > projects/README.md && \
+echo "Note: Do NOT edit the files in this subdirectory." >> projects/README.md && \
+echo "This directory is synced with the projects at https://github.com/CreativeKids/projects" >> projects/README.md && \
 git add --all . && \
 git commit -m "$COMMIT_MSG" && \
 git push && \
 cd .. && \
-rm -rf creativekids.github.io/
+rm -rf creativekidssa.com.au
