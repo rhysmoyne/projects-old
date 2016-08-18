@@ -5,8 +5,7 @@ install: ./travis-install.sh
 script: ./gulp dist && ./gulp links
 notifications:
   recipients:
-    - geirarne@gmail.com
-    - arve.seljebu@gmail.com
+    - rhys@creativekidssa.com.au
 cache:
   directories:
     - node_modules
