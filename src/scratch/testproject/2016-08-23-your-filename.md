@@ -1,3 +1,6 @@
-## A New Post
-
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+---
+title: Dive
+level: 2
+author: Erik Kalstad og Geir Arne Hjelle
+---
+​BLah
